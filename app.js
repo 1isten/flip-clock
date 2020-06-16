@@ -58,16 +58,16 @@
         const curr = now[`${t}${i}`];
         let next = +curr + 1;
         if (t === 'h') {
-          if (i === '0') next = next < 3 ? `${next}` : '0';
-          if (i === '1') next = next < 4 ? `${next}` : '0';
+          if (i === '0') next = next <= 2 ? `${next}` : '0';
+          if (i === '1') next = next <= 3 ? `${next}` : '0';
         }
         if (t === 'm') {
-          if (i === '0') next = next < 6 ? `${next}` : '0';
-          if (i === '1') next = next < 10 ? `${next}` : '0';
+          if (i === '0') next = next <= 5 ? `${next}` : '0';
+          if (i === '1') next = next <= 9 ? `${next}` : '0';
         }
         if (t === 's') {
-          if (i === '0') next = next < 6 ? `${next}` : '0';
-          if (i === '1') next = next < 10 ? `${next}` : '0';
+          if (i === '0') next = next <= 5 ? `${next}` : '0';
+          if (i === '1') next = next <= 9 ? `${next}` : '0';
         }
         const el = els[t][i];
         if (el && el.digit) {
