@@ -33,7 +33,7 @@
     el.cardFaceB = el.cardFaces[1];
 
     return els;
-  };
+  }
 
   (function runClock() {
     if (!document.hidden) {
